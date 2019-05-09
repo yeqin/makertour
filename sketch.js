@@ -38,16 +38,15 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(1200, 600);
+  createCanvas(window.innerWidth, window.innerHeight);
   location1 = true
-
 }
 
 function draw() {
 
   push()
   translate(0, -46)
-  image(l1, 0, 0, 600, 400)
+  image(l1, 0, 0, window.innerWidth, window.innerHeight)
 
   noStroke()
   fill(255, 150)
@@ -67,7 +66,7 @@ function draw() {
   }
 
   if (location1) {
-    image(l1, 0, 0, 600, 400)
+    image(l1, 0, 0, window.innerWidth, window.innerHeight)
     push()
     blendMode(OVERLAY)
     ellipse(150, 120 + 46, 30 + a, 30 + a)
@@ -77,7 +76,7 @@ function draw() {
   }
 
   if (location2) {
-    image(l2, 0, 0, 600, 400)
+    image(l2, 0, 0, window.innerWidth, window.innerHeight)
     push()
     blendMode(OVERLAY)
     ellipse(120, 120 + 46, 30 + a, 30 + a)
@@ -88,7 +87,7 @@ function draw() {
   }
 
   if (location4) {
-    image(l4, 0, 0, 600, 400)
+    image(l4, 0, 0, window.innerWidth, window.innerHeight)
     push()
     blendMode(OVERLAY)
     ellipse(200, 20 + 46, 30 + a, 30 + a)
@@ -98,7 +97,7 @@ function draw() {
   }
 
   if (location5) {
-    image(l5, 0, 0, 600, 400)
+    image(l5, 0, 0, window.innerWidth, window.innerHeight)
     push()
     blendMode(OVERLAY)
     ellipse(320, 90 + 46, 30 + a, 30 + a)
@@ -111,7 +110,7 @@ function draw() {
   }
 
   if (location6) {
-    image(l6, 0, 0, 600, 400)
+    image(l6, 0, 0, window.innerWidth, window.innerHeight)
     push()
     blendMode(OVERLAY)
     ellipse(90, 270 + 46, 30 + a, 30 + a)
@@ -121,7 +120,7 @@ function draw() {
 
   }
   if (location7) {
-    image(l7, 0, 0, 600, 400)
+    image(l7, 0, 0, window.innerWidth, window.innerHeight)
     push()
     blendMode(OVERLAY)
     ellipse(270, 180 + 46, 30 + a, 30 + a)
@@ -130,7 +129,7 @@ function draw() {
     pop()
   }
   if (location8) {
-    image(l8, 0, 0, 600, 400)
+    image(l8, 0, 0, window.innerWidth, window.innerHeight)
     push()
     blendMode(OVERLAY)
     ellipse(500, 40 + 46, 30 + a, 30 + a)
@@ -140,7 +139,7 @@ function draw() {
   }
 
   if (location9) {
-    image(l9, 0, 0, 600, 400)
+    image(l9, 0, 0, window.innerWidth, window.innerHeight)
     push()
     blendMode(OVERLAY)
     ellipse(100, 200 + 46, 30 + a, 30 + a)
@@ -172,7 +171,7 @@ function mousePressed() {
     location8 = false
     location9 = false
   }
-  
+
   if (location6 == true && mouseX > 80 && mouseX < 100 && mouseY > 260 && mouseY < 280) {
     location5 = true
     location1 = false
