@@ -1,5 +1,5 @@
 var timeStarted = 0
-var speeda = 0.5
+var speeda = 0.8
 
 var location1
 var location2
@@ -11,8 +11,8 @@ var location7
 var location8
 var location9
 
-var a = 0
 
+var a = 0
 var l1 = 0
 var l2 = 0
 var l3 = 0
@@ -22,6 +22,7 @@ var l6 = 0
 var l7 = 0
 var l8 = 0
 var l9 = 0
+
 
 function preload() {
 
@@ -69,9 +70,9 @@ function draw() {
     image(l1, 0, 0, window.innerWidth, window.innerHeight)
     push()
     blendMode(OVERLAY)
-    ellipse(150, 120 + 46, 30 + a, 30 + a)
-    ellipse(150, 120 + 46, 18 + a, 18 + a)
-    ellipse(150, 120 + 46, 10 + a, 10 + a)
+    ellipse(150, 220 + 46, 30 + a, 30 + a)
+    ellipse(150, 220 + 46, 18 + a, 18 + a)
+    ellipse(150, 220 + 46, 10 + a, 10 + a)
     pop()
   }
 
@@ -79,9 +80,20 @@ function draw() {
     image(l2, 0, 0, window.innerWidth, window.innerHeight)
     push()
     blendMode(OVERLAY)
-    ellipse(120, 120 + 46, 30 + a, 30 + a)
-    ellipse(120, 120 + 46, 18 + a, 18 + a)
-    ellipse(120, 120 + 46, 10 + a, 10 + a)
+    ellipse(40, 500 + 46, 30 + a, 30 + a)
+    ellipse(40, 500 + 46, 18 + a, 18 + a)
+    ellipse(40, 500 + 46, 10 + a, 10 + a)
+    pop()
+
+  }
+
+  if (location3) {
+    image(l3, 0, 0, window.innerWidth, window.innerHeight)
+    push()
+    blendMode(OVERLAY)
+    ellipse(700, 180 + 46, 30 + a, 30 + a)
+    ellipse(700, 180 + 46, 18 + a, 18 + a)
+    ellipse(700, 180 + 46, 10 + a, 10 + a)
     pop()
 
   }
@@ -90,9 +102,9 @@ function draw() {
     image(l4, 0, 0, window.innerWidth, window.innerHeight)
     push()
     blendMode(OVERLAY)
-    ellipse(200, 20 + 46, 30 + a, 30 + a)
-    ellipse(200, 20 + 46, 18 + a, 18 + a)
-    ellipse(200, 20 + 46, 10 + a, 10 + a)
+    ellipse(100, 200 + 46, 30 + a, 30 + a)
+    ellipse(100, 200 + 46, 18 + a, 18 + a)
+    ellipse(100, 200 + 46, 10 + a, 10 + a)
     pop()
   }
 
@@ -113,28 +125,30 @@ function draw() {
     image(l6, 0, 0, window.innerWidth, window.innerHeight)
     push()
     blendMode(OVERLAY)
-    ellipse(90, 270 + 46, 30 + a, 30 + a)
-    ellipse(90, 270 + 46, 18 + a, 18 + a)
-    ellipse(90, 270 + 46, 10 + a, 10 + a)
+    ellipse(150, 270 + 46, 30 + a, 30 + a)
+    ellipse(150, 270 + 46, 18 + a, 18 + a)
+    ellipse(150, 270 + 46, 10 + a, 10 + a)
     pop()
 
   }
+
   if (location7) {
     image(l7, 0, 0, window.innerWidth, window.innerHeight)
     push()
     blendMode(OVERLAY)
-    ellipse(270, 180 + 46, 30 + a, 30 + a)
-    ellipse(270, 180 + 46, 18 + a, 18 + a)
-    ellipse(270, 180 + 46, 10 + a, 10 + a)
+    ellipse(40, 500 + 46, 30 + a, 30 + a)
+    ellipse(40, 500 + 46, 18 + a, 18 + a)
+    ellipse(40, 500 + 46, 10 + a, 10 + a)
     pop()
   }
+
   if (location8) {
     image(l8, 0, 0, window.innerWidth, window.innerHeight)
     push()
     blendMode(OVERLAY)
-    ellipse(500, 40 + 46, 30 + a, 30 + a)
-    ellipse(500, 40 + 46, 18 + a, 18 + a)
-    ellipse(500, 40 + 46, 10 + a, 10 + a)
+    ellipse(40, 500 + 46, 30 + a, 30 + a)
+    ellipse(40, 500 + 46, 18 + a, 18 + a)
+    ellipse(40, 500 + 46, 10 + a, 10 + a)
     pop()
   }
 
@@ -142,25 +156,22 @@ function draw() {
     image(l9, 0, 0, window.innerWidth, window.innerHeight)
     push()
     blendMode(OVERLAY)
-    ellipse(100, 200 + 46, 30 + a, 30 + a)
-    ellipse(100, 200 + 46, 18 + a, 18 + a)
-    ellipse(100, 200 + 46, 10 + a, 10 + a)
+    ellipse(40, 500 + 46, 30 + a, 30 + a)
+    ellipse(40, 500 + 46, 18 + a, 18 + a)
+    ellipse(40, 500 + 46, 10 + a, 10 + a)
     pop()
   }
-
-
 
   pop()
 
   noStroke()
   ellipse(mouseX, mouseY, 20, 20)
 
-
 }
 
 function mousePressed() {
 
-  if ((location1 == true) && mouseX > 150-10 && mouseX < 150+10 && mouseY > 120-10 && mouseY < 120+10) {
+  if ((location1 == true) && mouseX > 150 - 10 && mouseX < 150 + 10 && mouseY > 220 - 10 && mouseY < 220 + 10) {
     location6 = true
     location1 = false
     location2 = false
@@ -172,7 +183,19 @@ function mousePressed() {
     location9 = false
   }
 
-  if (location6 == true && mouseX > 80 && mouseX < 100 && mouseY > 260 && mouseY < 280) {
+  if ((location2 == true) && mouseX > 40 - 10 && mouseX < 40 + 10 && mouseY > 500 - 10 && mouseY < 500 + 10) {
+    location6 = false
+    location1 = false
+    location2 = false
+    location3 = false
+    location4 = true
+    location5 = false
+    location7 = false
+    location8 = false
+    location9 = false
+  }
+
+  if (location6 == true && mouseX > 150 - 10 && mouseX < 150 + 10 && mouseY > 260 && mouseY < 280) {
     location5 = true
     location1 = false
     location2 = false
@@ -199,6 +222,67 @@ function mousePressed() {
   if ((location5 == true) && (mouseX > 70 - 10 && mouseX < 70 + 10 && mouseY > 200 - 10 && mouseY < 200 + 10)) {
     location1 = false
     location2 = false
+    location3 = true
+    location4 = false
+    location5 = false
+    location6 = false
+    location7 = false
+    location8 = false
+    location9 = false
+  }
+
+  if ((location7 == true) && mouseX > 40 - 10 && mouseX < 40 + 10 && mouseY > 500 - 10 && mouseY < 500 + 10) {
+
+    location4 = false
+    location1 = false
+    location2 = false
+    location3 = false
+    location5 = true
+    location6 = false
+    location7 = false
+    location8 = false
+    location9 = false
+  }
+
+  if ((location4 == true) && mouseX > 100 - 10 && mouseX < 100 + 10 && mouseY > 200 - 10 && mouseY < 200 + 10) {
+    location2 = false
+    location1 = false
+    location3 = false
+    location4 = false
+    location5 = false
+    location6 = false
+    location7 = false
+    location8 = true
+    location9 = false
+  }
+
+  if (location2 == true && mouseX > 120 - 10 && mouseX < 120 + 10 && mouseY > 120 - 10 && mouseY < 120 + 10) {
+    location8 = false
+    location1 = false
+    location2 = false
+    location3 = true
+    location4 = false
+    location5 = false
+    location6 = false
+    location7 = false
+    location9 = false
+  }
+
+  if (location3 == true && mouseX > 700 - 10 && mouseX < 700 + 10 && mouseY > 180 - 10 && mouseY < 180 + 10) {
+    location1 = false
+    location2 = true
+    location3 = false
+    location4 = false
+    location5 = false
+    location6 = false
+    location7 = false
+    location8 = false
+    location9 = false
+  }
+  //
+  if (location8 == true && mouseX > 40 - 10 && mouseX < 40 + 10 && mouseY > 500 - 10 && mouseY < 500 + 10) {
+    location1 = false
+    location2 = false
     location3 = false
     location4 = false
     location5 = false
@@ -207,61 +291,16 @@ function mousePressed() {
     location8 = false
     location9 = true
   }
-  if ((location7 == true) && mouseX > 270 - 10 && mouseX < 270 + 10 && mouseY > 180 - 10 && mouseY < 180 + 10) {
 
-    location4 = true
-    location1 = false
-    location2 = false
-    location3 = false
-    location5 = false
-    location6 = false
-    location7 = false
-    location8 = false
-    location9 = false
-    }
-  if ((location4 == true) && mouseX > 200 - 10 && mouseX < 200 + 10 && mouseY > 20 - 10 && mouseY < 20 + 10) {
-    location2 = true
-    location1 = false
-    location3 = false
+  if ((location9 == true) && mouseX > 40 - 10 && mouseX < 40 + 10 && mouseY > 500 - 10 && mouseY < 500 + 10) {
     location4 = false
-    location5 = false
-    location6 = false
-    location7 = false
-    location8 = false
-    location9 = false
-  }
-  if (location2 == true && mouseX > 120 - 10 && mouseX < 120 + 10 && mouseY > 120 - 10 && mouseY < 120 + 10) {
-    location8 = true
-    location1 = false
-    location2 = false
-    location3 = false
-    location4 = false
-    location5 = false
-    location6 = false
-    location7 = false
-    location9 = false
-  }
-  //
-  if (location8 == true && mouseX > 500 - 10 && mouseX < 500 + 10 && mouseY > 40 - 10 && mouseY < 40 + 10) {
     location1 = true
     location2 = false
     location3 = false
-    location4 = false
     location5 = false
     location6 = false
     location7 = false
     location8 = false
-    location9 = false
-  }
-  if (location9 == true && mouseX > 80 - 10 && mouseX < 120 + 10 && mouseY > 200 - 10 && mouseY < 200 + 10) {
-    location1 = false
-    location2 = false
-    location3 = false
-    location4 = false
-    location5 = false
-    location6 = false
-    location7 = false
-    location8 = true
     location9 = false
   }
 
